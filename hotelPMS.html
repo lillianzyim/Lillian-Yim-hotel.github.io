@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasia Getaway Resort Hotel PMS</title>
+    <script src="hotelscript.js"></script>
+</head>
+<body>
+    <img src="sticker - Copy.jpg" alt="logo"><hr>
+    <div id="room1">
+        Name: <input id="name1">
+        <ol id="guestlist1"></ol>
+        <!-- can be enter key or button -->
+        <button id="addguest1bt" onclick="addguest1()">Add Guest</button>
+        <button id="removguest1bt" onclick="removguest1()">Remove Guest</button>
+        <script>
+            document.addEventListener('keydown', (event) => {
+                // i guess you need the list.children.length to access the <li> in the <ol>. funny.
+                console.log((document.getElementById('guestlist1').children.length) + 1)
+                // if press enter
+                if (event.key === 'Enter' || event.code === 'Enter') {
+                    addguest1()
+                }});
+
+        </script>
+    </div>
+</body>
+</html>
