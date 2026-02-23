@@ -5,24 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fantasia Getaway Resort Hotel PMS</title>
     <script src="hotelscript.js"></script>
+    <style href="hotelstyle.css"></style>
 </head>
 <body>
     <img src="sticker - Copy.jpg" alt="logo"><hr>
     <div id="room1">
+        <h1 id="rmname1">Room 1</h1>
         Name: <input id="name1">
+        <h1 id="statusrm1holder"></h1>
         <ol id="guestlist1"></ol>
         <!-- can be enter key or button -->
         <button id="addguest1bt" onclick="addguest1()">Add Guest</button>
         <button id="removguest1bt" onclick="removguest1()">Remove Guest</button>
+        <button id="clearrm1bt" onclick="clearrm1()">Clear Room Names</button>
+        <button id="checkoutbt" onclick="checkoutrm1()">Check Out/Clean</button>
         <script>
-            document.addEventListener('keydown', (event) => {
-                // i guess you need the list.children.length to access the <li> in the <ol>. funny.
-                console.log((document.getElementById('guestlist1').children.length) + 1)
-                // if press enter
-                if (event.key === 'Enter' || event.code === 'Enter') {
-                    addguest1()
-                }});
-
+            let guestlist1 = document.getElementById('guestlist1')
+                document.addEventListener('keydown', (event) => {
+                    // i guess you need the list.children.length to access the <li> in the <ol>. funny.
+                        // console.log((document.getElementById('guestlist1').children.length) + 1)
+                    // if press enter
+                    if (event.key === 'Enter' || event.code === 'Enter') {
+                        addguest1()
+                    }});
         </script>
     </div>
 </body>
