@@ -41,7 +41,7 @@ function removguest1() {
     // else/if tbr found, remove it
     else {
         // for (created var removli) of each item in the children <li> of guestlist1
-        for (let removli of guestlist1.children) {
+        for (let removli of Array.from(guestlist1.children)) {
             // if the textContent of 
             if (removli.textContent === tbr) {
                 // let removlist = __.parentNode
@@ -52,7 +52,6 @@ function removguest1() {
                 // clear input field
                 document.getElementById('name1').value =""
                 document.getElementById('name1').focus()
-
             }
         }}
     console.log(copygl1)
@@ -67,6 +66,7 @@ function clearrm1() {
     }
     copygl1 = []
     console.log(copygl1)
+    document.getElementById('addguest1bt').disabled = false
 }
 
 let statusrm1 = false
